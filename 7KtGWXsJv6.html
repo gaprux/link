@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+
+  <script>
+    function openShopee() {
+      var shopeeLink = "https://s.shopee.co.id/7KtGWXsJv6";
+      var intentLink = "intent://s.shopee.co.id/7KtGWXsJv6#Intent;package=com.shopee.id;scheme=https;end";
+
+      var ua = navigator.userAgent.toLowerCase();
+
+      if (ua.indexOf("android") > -1) {
+        window.location.href = intentLink;
+        setTimeout(function() {
+          window.location.href = shopeeLink;
+        }, 1500);
+      } else {
+        window.location.href = shopeeLink;
+      }
+    }
+
+    window.onload = function() {
+      setTimeout(openShopee, 300);
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 50px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background: orange;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Mengalihkan ...</h2>
+  <p>Jika tidak otomatis, klik tombol di bawah:</p>
+  <a href="https://s.shopee.co.id/7KtGWXsJv6">Dapatkan Promo</a>
+</body>
+</html>
